@@ -1,0 +1,39 @@
+<!--pages/details/details.wxml-->
+<view class='details'>
+<!-- 顶部的盒子start -->
+<view class='book-details'>
+  <view class='book-t'>
+    <image src="{{}}"></image>
+    <view class='main-msg'>
+        <view class='title'>零基础学Python</view>
+    </view>
+    <view class='author-name'></view>
+    <view class='looknumbers'></view>
+    <view class='likenumbers'></view>
+  </view>
+  <view class='book-b'>
+    <button class='btn'>收藏</button>
+    <button class='btn'>分享好友</button>
+  </view>
+</view>
+<!-- 顶部的盒子end -->
+<!-- 简介start -->
+<view class='book-desc'>
+  <view class='title'>
+  简介
+  </view>
+  <view class='desc-mian'></view>
+</view>
+<!-- 简介end -->
+<!-- 目录start -->
+<view class='book-catalog'>
+  <view class='show-catalog'>查看目录</view>
+  <view class='catalogs'>共94章</view>
+  <view class='updata-time'>更新于两天前</view>
+</view>
+<!-- 目录end -->
+<view class='book-btn-wrap'></view>
+
+
+
+</view>

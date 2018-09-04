@@ -1,11 +1,39 @@
 <!--index.wxml-->
-<view class="container">
-<swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150"/>
-    </swiper-item>
-  </block>
-</swiper>
+<view class="container index">
+<!-- 轮播图start -->
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{swiperData}}" wx:key="{{index}}" >
+      <swiper-item bindtap="jumpBook" data-id="{{item.book._id}}">
+        <image src="{{item.img}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 轮播图end -->
+
+<!-- 内容区start -->
+  <view class='main-content'>
+  <!-- 标题加内容块 -->
+    <view class='content-item' wx:for="{{mainContent}}" wx:key="index">
+      <view class='title'>{{item.title}}</view>
+      <!-- 标题下的每本书 -->
+      <view class='content' wx:for="{{item.books}}" wx:key="index">
+        <view class='box-l'>
+          <image src='{{item.img}}'></image>
+        </view>
+        <view class='box-r'>
+          <view class='box-title'>{{item.title}}</view>
+          <view class='box-desc'>{{item.desc}}</view>
+          <view class='author'>
+            <text class='author-l'>{{item.author}}</text>
+            <view class='author-r'>
+              <text class='update-time'>两天前</text>
+              <text class='many'>{{item.looknums}}人在看</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 内容区end -->
+    </view>
+  </view>
 </view>

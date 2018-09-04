@@ -1,4 +1,54 @@
 /**index.wxss**/
-.container{
-  padding: 0 20rpx;
+.index .slide-image{
+  width: 710rpx;
+  height: 340rpx;
+}
+.content-item{
+  margin-top: 40rpx ;
+}
+.content-item .title{
+  margin-bottom: 40rpx;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 20rpx;
+  line-height: 24rpx;
+  height: 24rpx;
+  border-left: 2px solid #000;
+}
+.content-item .content{
+   border-top: 2px solid #999;
+  list-style-position: 40rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+.content-item .content .box-l image{
+  width: 230rpx;
+  height: 350rpx;
+  margin-right: 20rpx;
+}
+.content-item .content .box-r{
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box-title{
+  font-size: 16px;
+  color: #333;
+}
+.box-desc{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+  color: #444;
+  font-size: 13px;
+  line-height: 1.5;
+  margin:0 0 40rpx;
+}
+.content-item .content .box-r .author{
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
