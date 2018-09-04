@@ -1,12 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/catalog/catalog",
+    "pages/book/book"
   ],
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#333",
     "navigationBarTitleText": "颜如玉的黄金屋",
-    "navigationBarTextStyle": "blue"
+    "navigationBarTextStyle": "write"
   }
 }

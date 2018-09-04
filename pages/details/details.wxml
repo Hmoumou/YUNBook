@@ -3,13 +3,14 @@
 <!-- 顶部的盒子start -->
 <view class='book-details'>
   <view class='book-t'>
-    <image src="{{}}"></image>
+    <image src="{{bookData.data.img}}"></image>
     <view class='main-msg'>
-        <view class='title'>零基础学Python</view>
-    </view>
-    <view class='author-name'></view>
-    <view class='looknumbers'></view>
-    <view class='likenumbers'></view>
+        <view class='title'>{{bookData.data.title}}</view>
+    
+    <view class='author-name'>作者：{{bookData.data.author}}</view>
+    <view class='looknumbers'>{{bookData.data.looknums}}人再看</view>
+    <view class='likenumbers'>{{bookData.data.startsnums}}人喜欢</view>
+  </view>
   </view>
   <view class='book-b'>
     <button class='btn'>收藏</button>
@@ -22,18 +23,22 @@
   <view class='title'>
   简介
   </view>
-  <view class='desc-mian'></view>
+  <view class='desc-mian'>{{bookData.data.desc}}</view>
 </view>
 <!-- 简介end -->
 <!-- 目录start -->
-<view class='book-catalog'>
-  <view class='show-catalog'>查看目录</view>
-  <view class='catalogs'>共94章</view>
-  <view class='updata-time'>更新于两天前</view>
-</view>
+  <view class='book-catalog'>
+    <view class='catalog-l'>
+      <view class='show-catalog'>查看目录</view>
+      <view class='catalogs'>共{{bookData.length}}章</view>
+    </view>
+    <view class='catalog-r updata-time'>更新于两天前</view>
+  </view>
 <!-- 目录end -->
-<view class='book-btn-wrap'></view>
-
-
+  <view class='book-btn-wrap'>
+    <button class='b-btn' bindtap="jumpCatalog">
+    阅读该书籍
+    </button>
+  </view>
 
 </view>

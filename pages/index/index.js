@@ -30,6 +30,7 @@ Page({
     })
   },
   jumpBook(event){
+    console.log(event)
     const id = event.currentTarget.dataset.id
     wx.navigateTo({
       url: `/pages/details/details?id=${id}`,

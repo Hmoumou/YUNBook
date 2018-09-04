@@ -1,0 +1,12 @@
+/* pages/catalog/catalog.wxss */
+.catalog{
+font-size: 14px;
+color: #333;
+}
+.catalog .catalog-item {
+line-height: 2;
+border-bottom: 2rpx solid #333;
+}
+.link{
+  margin-left: 20rpx;
+}
