@@ -1,10 +1,11 @@
 // pages/details/details.js
 import {fetch} from "../../utils/util.js"
+const app = getApp()
 Page({
-  
   data: {
     bookId:"",
-    bookData:{}
+    bookData:{},
+    isLoading:false
   },
 
   // 取跳转的东西
@@ -16,10 +17,18 @@ Page({
     this.getData()
   },
   getData(){
+    this.setData({
+      isLoading:true
+    })
     fetch.get(`/book/${this.data.bookId}`).then(res=>{
       console.log(res)
       this.setData({
-        bookData:res
+        bookData:res,
+        isLoading: false
+      })
+    }).catch(err=>{
+      this.setData({
+        isLoading: false
       })
     })
   },

@@ -1,5 +1,7 @@
 <!--pages/details/details.wxml-->
 <view class='details'>
+<image src='/static/img/yunbook.svg' class='loading' wx:if="{{isLoading}}"></image>
+<view wx:else>
 <!-- 顶部的盒子start -->
 <view class='book-details'>
   <view class='book-t'>
@@ -40,5 +42,6 @@
     阅读该书籍
     </button>
   </view>
+</view>
 
 </view>

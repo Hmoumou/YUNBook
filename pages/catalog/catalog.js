@@ -1,5 +1,6 @@
 // pages/catalog/catalog.js
 import {fetch} from "../../utils/util.js"
+const app = getApp()
 
 Page({
 
@@ -8,7 +9,8 @@ Page({
    */
   data: {
    bookId:"",
-   catalogData:[]
+   catalogData:[],
+   isLoading:false
   },
 
   /**
@@ -22,11 +24,17 @@ Page({
     this.getData()
   },
   getData(){
+    this.setData({
+      isLoading:true
+    })
     fetch.get(`/titles/${this.data.bookId}`).then(res=>{
       console.log(res)
       this.setData({
-        catalogData:res.data
+        catalogData:res.data,
+        isLoading: false
       })
+    }).catch(err=>{
+      isLoading: false
     })
   },
 

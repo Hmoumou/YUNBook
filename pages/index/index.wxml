@@ -1,5 +1,8 @@
 <!--index.wxml-->
 <view class="container index">
+<!-- isloading -->
+<image src='/static/img/yunbook.svg' class='loading' wx:if="{{isLoading}}"></image>
+<view wx:else>
 <!-- 轮播图start -->
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -36,4 +39,5 @@
       <!-- 内容区end -->
     </view>
   </view>
+</view>
 </view>

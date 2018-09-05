@@ -9,17 +9,26 @@ Page({
     indicatorDots: true,
     autoplay: false,
     interval: 3000,
-    duration: 1000
+    duration: 1000,
+    isLoading:false
   },
   onLoad() {
     this.getData(),
     this.getContent()
   },
   getData(){
+    this.setData({
+      isLoading: true,
+    })
     fetch.get('/swiper').then(res=>{
     this.setData({
-      swiperData:res.data
+      swiperData:res.data,
+      isLoading: false,
     })
+   }).catch(err=>{
+     this.setData({
+       isLoading: false
+     })
    })
   },
   getContent(){

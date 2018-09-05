@@ -6,7 +6,6 @@ App({
     
   },
   // 声明一个实意对象
-  towxml:new Towxml(),
   globalData:{
     userInfo:null
   }
