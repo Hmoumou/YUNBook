@@ -5,7 +5,7 @@ Page({
   data: {
     bookId:"",
     bookData:{},
-    isLoading:false
+    isLoading:false,
   },
 
   // 取跳转的东西

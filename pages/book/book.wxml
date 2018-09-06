@@ -1,29 +1,29 @@
 <!--pages/book/book.wxml-->
 
 
-<view class="book">
+<view class="book" style="{{'font-size:'+font+'rpx'}}">
 <!-- isloading -->
 <image src='/static/img/yunbook.svg' class='loading' wx:if="{{isLoading}}"></image>
 <view wx:else>
 <view>
   <wemark md="{{article}}" highlight type="wemark"></wemark>
   </view>
+    <!-- 底部图标 -->
+  <view class='menu'>
+    <view class='iconfont icon-prev' bindtap='pagesprav'></view>
+    <view class='iconfont icon-mulu' bindtap='toggleCatalog'></view>
+    <view class='iconfont icon-zitifangda' bindtap='zitiadd'></view>
+    <view class='iconfont icon-zitisuoxiao' bindtap='zitisuoxiao'></view>
+    <view class='iconfont icon-next' bindtap='pagesnext'></view>
+  </view>
    <!-- 菜单 -->
-  <scroll-view class='catalog-menu' scroll-y  wx:if="{{isShow}}">
+  <scroll-view class='catalog-menu {{isShow ? "active" : "" }}' scroll-y>
   <view class='catalog-item' wx:for="{{catalog}}"  wx:key="{{index}}" bindtap='handleGet' data-id='{{item._id}}'>{{item.title}}</view>
    </scroll-view>
    <!-- 蒙版 -->
     <view class='mask' wx:if="{{isShow}}" bindtap='toggleCatalog'></view>
-    
-  <!-- 底部图标 -->
-  <view class='menu' hidden='!isLoading'>
-    <view class='iconfont icon-prev'></view>
-    <view class='iconfont icon-mulu' bindtap='toggleCatalog'></view>
-    <view class='iconfont icon-zitifangda'></view>
-    <view class='iconfont icon-zitisuoxiao'></view>
-    <view class='iconfont icon-next'></view>
-  </view>
 </view>
- 
+
+  
 </view>
 
