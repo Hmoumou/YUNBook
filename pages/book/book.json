@@ -1,5 +1,6 @@
 {
   "usingComponents":{
     "wemark":"../../component/wemark/wemark"
-  }
+  },
+  "navigationBarTitleText": "书籍正文页"
 }

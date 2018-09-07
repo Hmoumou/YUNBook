@@ -1,6 +1,5 @@
-
 const app = getApp()
-import {fetch} from '../../utils/util.js'
+import { fetch, login } from '../../utils/util.js'
 
 Page({
   data: {
@@ -17,6 +16,7 @@ Page({
     isloadMore:false
   },
   onLoad() {
+    login()
     this.setData({
       isLoading:true
     })
@@ -26,6 +26,7 @@ Page({
         isLoading:false
       })
     })
+    
   },
   getData(){
     this.setData({

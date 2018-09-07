@@ -9,24 +9,35 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#333",
+    "navigationBarBackgroundColor": "#00FF00",
     "navigationBarTitleText": "颜如玉的黄金屋",
-    "navigationBarTextStyle": "write"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "",
+    "color": "#333",
+    "selectedColor": "#F00",
+    "backgroundColor": "#00FF00",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath":"static/img/index.png",
+        "selectedIconPath":"static/img/index1.png"
+        
+      },
+      
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "我的收藏",
+        "iconPath": "static/img/collect.png",
+        "selectedIconPath": "static/img/collect1.png"
+        
       },
       {
         "pagePath": "pages/ours/ours",
-        "text": "个人中心"
-      },
-      {
-        "pagePath": "pages/collect/collect",
-        "text": "我的收藏"
+        "text": "个人中心",
+        "iconPath": "/static/img/ours.png",
+        "selectedIconPath": "/static/img/ours1.png"
       }
     ]
   },

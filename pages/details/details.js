@@ -5,7 +5,7 @@ Page({
   data: {
     bookId:"",
     bookData:{},
-    isLoading:false,
+    isLoading:false
   },
 
   // 取跳转的东西
@@ -37,11 +37,16 @@ Page({
       url: `/pages/catalog/catalog?id=${this.data.bookId}`
     })
   },
- 
+
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title:this.data.bookData.data.title,
+      path:`/pages/details/details?id=${this.data.bookId}`,
+      imageUrl:this.data.bookData.data.img
+      
+    }
   }
 })

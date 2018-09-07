@@ -61,7 +61,7 @@
   background: rgba(40, 90, 228, 0.4);
 }
 .loading-more image{
-  margin-left: 90rpx;
+  margin-left: 160rpx;
   width: 80rpx;
   height: 80rpx;
 }

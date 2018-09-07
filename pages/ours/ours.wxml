@@ -1,2 +1,8 @@
 <!--pages/ours/ours.wxml-->
-<text>pages/ours/ours.wxml</text>
+<view class='container'>
+  <text>我的ID:</text>
+  <view class='mycollect'>
+  <text>我的收藏:</text>
+  <image src='' bindtap='jumpBook'></image>
+  </view>
+</view>
