@@ -5,7 +5,8 @@ Page({
   data: {
     bookId:"",
     bookData:{},
-    isLoading:false
+    isLoading:false,
+    iscollect:0
   },
 
   // 取跳转的东西
@@ -16,6 +17,25 @@ Page({
     })
     this.getData()
   },
+
+  collect(){
+    this.setData({
+      iscollect:false
+    }),
+    wx.showToast({
+      title: '收藏成功',
+      duration:1000,
+      mask:true,
+
+      success:()=>{
+        this.setData({
+          iscollect: true
+        })
+        fetch.post("/collection",{bookId:this.data.bookid})
+      }
+    })
+  },
+
   getData(){
     this.setData({
       isLoading:true
@@ -48,5 +68,10 @@ Page({
       imageUrl:this.data.bookData.data.img
       
     }
+  },
+  readbook:function(){
+    wx.navigateTo({
+      url: `/pages/book/book?id=${this.data.bookid}`,
+    })
   }
 })

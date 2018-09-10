@@ -4,34 +4,32 @@
     "pages/details/details",
     "pages/catalog/catalog",
     "pages/book/book",
-    "pages/collect/collect",
-    "pages/ours/ours"
+    "pages/ours/ours",
+    "pages/study/study",
+    "pages/collect/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#00FF00",
+    "navigationBarBackgroundColor": "#333",
     "navigationBarTitleText": "颜如玉的黄金屋",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#333",
     "selectedColor": "#F00",
-    "backgroundColor": "#00FF00",
+    "backgroundColor": "#c1c1c1",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"static/img/index.png",
-        "selectedIconPath":"static/img/index1.png"
-        
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index1.png"
       },
-      
       {
-        "pagePath": "pages/collect/collect",
-        "text": "我的收藏",
+        "pagePath": "pages/study/study",
+        "text": "我的学习",
         "iconPath": "static/img/collect.png",
         "selectedIconPath": "static/img/collect1.png"
-        
       },
       {
         "pagePath": "pages/ours/ours",

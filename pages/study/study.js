@@ -1,56 +1,21 @@
-// pages/ours/ours.js
-import {fatch} from "../../utils/util.js"
-const app = getApp()
+// pages/study/study.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   userInfo:{},
-  text:"先登录哦~"
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-    },
-   
-  getuser() {
-    wx.getUserInfo({
-      success: (data) => {
-        console.log(data)
-        this.setData({
-          userInfo: data.userInfo,
-          text:"嗷呜呜~"
-        })
-      }
-    })
-
-  },
-
-
-    gocollect(){
-      if (this.data.text == "嗷呜呜~") {
-      wx.navigateTo({
-        url: '/pages/collect/collect',
-      })
-      }else{
-        wx.showToast({
-          title: '请先登录哦~',
-        })
-      }
-    } ,
   
-  goguanzu(){
-    wx.showToast({
-      title: '此功能正在维护中~',
-    })
   },
 
-   /**
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {

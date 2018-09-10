@@ -1,2 +1,10 @@
 <!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+<view class='collect-wraper'>
+  <view class='collect-box'>
+    <image class='collect-img' src=''>
+    </image>
+    <text class='collect-title'>
+    </text>
+  </view>
+</view>
+<view class='line-btm'><text>已全部加载</text></view>

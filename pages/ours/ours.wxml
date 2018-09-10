@@ -1,8 +1,25 @@
 <!--pages/ours/ours.wxml-->
-<view class='container'>
-  <text>我的ID:</text>
-  <view class='mycollect'>
-  <text>我的收藏:</text>
-  <image src='' bindtap='jumpBook'></image>
+  
+<view class='box'>
+<view class='ours'>
+  
+    <view class='touxiang'>
+      <image class='img' src='{{userInfo.avatarUrl}}'></image>
+      <text class='username'>欢迎你，{{userInfo.nickName}}</text>
+    </view>
+    <view class='btm'>
+    <view class='collect' bindtap='gocollect'>
+      <text>0</text>
+      <text>我的收藏</text>
+    </view>
+    <view class='collect' bindtap='goguanzu'>
+      <text>0</text>
+      <text>关注</text>
+    </view>
+    
+    </view>
+  
   </view>
+    <button class='btn' bindtap='getuser' open-type="getUserInfo">{{text}}</button> 
+
 </view>
